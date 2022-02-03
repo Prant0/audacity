@@ -4,13 +4,16 @@ import 'package:audacity/model/photo_model.dart';
 import 'package:http/http.dart' as http;
 
 class CustomHttpRequest {
+
+
+
   static Future<dynamic> getPhoto(context) async {
     PhotoModel? photoModel;
     List<PhotoModel> photoList = [];
     try {
       String url = "https://picsum.photos/v2/list?page=2&limit=2000";
-
       var response = await http.get(Uri.parse(url));
+      print("Responce issss $response");
       if (response.statusCode == 200) {
         final item = json.decode(response.body);
         print(item);

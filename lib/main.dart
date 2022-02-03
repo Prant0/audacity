@@ -1,22 +1,22 @@
 import 'package:audacity/screen/home_page.dart';
+import 'package:audacity/widget/photo_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider<PhotoProvider>(create: (_) => PhotoProvider()),
+  ], child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomePage()
-    );
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: HomePage());
   }
 }
