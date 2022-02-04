@@ -11,7 +11,7 @@ class CustomHttpRequest {
     PhotoModel? photoModel;
     List<PhotoModel> photoList = [];
     try {
-      String url = "https://picsum.photos/v2/list?page=2&limit=2000";
+      String url = "https://picsum.photos/v2/list";
       var response = await http.get(Uri.parse(url));
       print("Responce issss $response");
       if (response.statusCode == 200) {
