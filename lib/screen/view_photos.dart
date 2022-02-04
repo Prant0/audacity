@@ -32,7 +32,9 @@ class _ViewPhotosState extends State<ViewPhotos> {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: IconButton(
-              onPressed: (){Navigator.of(context).pop();},
+              onPressed: (){
+                Navigator.pop(context);
+                },
               icon:Icon(Icons.arrow_back_ios,size: 28,color: Colors.white,)),
           ),
 
