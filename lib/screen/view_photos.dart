@@ -30,7 +30,7 @@ class _ViewPhotosState extends State<ViewPhotos> {
             errorWidget: (context, url, error) => Icon(Icons.error),
           ),
           Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 35),
             child: IconButton(
               onPressed: (){
                 Navigator.pop(context);

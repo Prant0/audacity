@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
         margin: EdgeInsets.only(top: 30),
         padding: EdgeInsets.symmetric(vertical: 20),
         width: double.infinity,
-        child:photos.isEmpty?CircularProgressIndicator():SingleChildScrollView(
+        child:photos.isEmpty?Center(child: CircularProgressIndicator()):SingleChildScrollView(
           child: Column(
             children: [
               StaggeredGridView.countBuilder(
